@@ -4,21 +4,29 @@
 <head>
     <meta charset="utf-8">
     <title>Каталог интернет-магазина «Девайс»</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="inner-page">
     <header class="main-header">
         <nav class="main-navigation">
-            <a class="main-header-logo">
-
+            <a class="main-header-logo" href="#">
+                Device
             </a>
             <ul class="user-navigation">
                 <li class="search">
                     <label class="visually-hidden" for="search">Поиск по сайту</label>
                     <input class="search-icon-user" id="search" type="text" name="search" placeholder="Поиск по сайту">
+                    <a href="#" class="btn-search visually-hidden">Найти</a>
                 </li>
-                <li class="login">
-                    <a class="login-link" href="login.html">Войти</a>
+              
+                <li class="profile">
+                    <a class="profile-link" href="profile.html">Валентин Петухов</a>
+                </li>
+                <li class="exit">
+                    <a class="exit-link" href="exit.html">Выйти</a>
                 </li>
                 <li class="compare">
                     <a class="compare-link" href="compare.html">Сравнить</a>
@@ -68,7 +76,7 @@
     </header>
     <main class="container">
 
-        <h1>Моноподы для селфи</h1>
+        <h1 class="name-page">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
             <li>
                 <a href="index.html">Главная</a>
@@ -82,7 +90,8 @@
 
         </ul>
         <section class="filter">
-            <h2 class="visually-hidden">Фильр товаров</h2>
+            <h2 class="visually-hidden">Фильтр товаров</h2>
+            <span class="filter-name">Фильтр:</span>
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
                 <fieldset>
                     <legend>Стоимость</legend>
@@ -90,7 +99,7 @@
                 </fieldset>
                 <fieldset>
                     <legend>Цвет:</legend>
-                    <ul>
+                    <ul class="color-list">
                         <li class="color-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
                                 name="black" id="black" checked>
@@ -121,7 +130,7 @@
                 </fieldset>
                 <fieldset>
                     <legend>Bluetooth</legend>
-                    <ul>
+                    <ul class="bluetooth-list">
                         <li class="bluetooth-option">
                             <input class="visually-hidden filter-input filter-input-radio" type="radio"
                                 name="bluetooth" value="yes" id="bluetooth-yes" checked>
@@ -135,7 +144,7 @@
                       
                     </ul>
                 </fieldset>
-                <button type="submit" class="filter-button button">Показать</button>
+                <button type="submit" class="filter-button btn">Показать</button>
             </form>
            
         </section>
@@ -143,10 +152,10 @@
         <section class="catalog">
             <h2 class="visually-hidden">Список моноподов</h2>
             <div class="navigation">
-                <b>Сортировка</b>
-                <button class="active">По цене</button>
-                <button>По типу</button>
-                <button>По популярности</button>
+                <span class="sort-name">Сортировка:</span>
+                <a href="#" class="active">По цене</a>
+                <a href="#">По типу</a>
+                <a href="#">По популярности</a>
             </div>
 
             <ul class="catalog-list">
@@ -160,11 +169,11 @@
                         </a>
                     </h3>
                     <span class="catalog-item-price">
-                        <b>500 руб.</b>
+                        <b class="item-price">500 руб.</b>
                     </span>
                     <div class="visually-hidden">
                         <button class="btn">В корзину</button>
-                        <button>Добавить к сравнению</button>
+                        <button class="add-to-comparison">Добавить к сравнению</button>
                     </div>
                     <div class="new-item visually-hidden">
                         <span>new</span>
@@ -180,11 +189,11 @@
                         </a>
                     </h3>
                     <span class="catalog-item-price">
-                        <b>1 500 руб.</b>
+                        <b class="item-price">1 500 руб.</b>
                     </span>
                     <div class="visually-hidden">
                         <button class="btn">В корзину</button>
-                        <button>Добавить к сравнению</button>
+                        <button class="add-to-comparison">Добавить к сравнению</button>
                     </div>
                     <div class="new-item visually-hidden">
                         <span>new</span>
@@ -200,11 +209,11 @@
                         </a>
                     </h3>
                     <span class="catalog-item-price">
-                        <b>2 500 руб.</b>
+                        <b class="item-price">2 500 руб.</b>
                     </span>
                     <div class="visually-hidden">
                         <button class="btn">В корзину</button>
-                        <button>Добавить к сравнению</button>
+                        <button class="add-to-comparison">Добавить к сравнению</button>
                     </div>
                     <div class="new-item visually-hidden">
                         <span>new</span>
@@ -220,11 +229,11 @@
                         </a>
                     </h3>
                     <span class="catalog-item-price">
-                        <b>4 900 руб.</b>
+                        <b class="item-price">4 900 руб.</b>
                     </span>
                     <div class="visually-hidden">
                         <button class="btn">В корзину</button>
-                        <button>Добавить к сравнению</button>
+                        <button class="add-to-comparison">Добавить к сравнению</button>
                     </div>
                     <div class="new-item">
                         <span>new</span>
@@ -234,30 +243,30 @@
             </ul>
             <ul class="pagination-list">
                 <li class="pagination-item">
-                    <a href="#">назад</a>
-                </li>
-                <li class="pagination-item">
-                    <a>1</a>
+                    <a href="#" class="pagination-btn">Назад</a>
                 </li>
                 <li class="pagination-item pagination-item-current">
-                    <a href="#">2</a>
+                    <a href="#" class="page-number active">1</a>
                 </li>
                 <li class="pagination-item">
-                    <a href="#">3</a>
+                    <a href="#" class="page-number">2</a>
                 </li>
                 <li class="pagination-item">
-                    <a href="#">вперед</a>
+                    <a href="#" class="page-number">3</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="#" class="pagination-btn">Вперед</a>
                 </li>
             </ul>
         </section>
 
     </main>
     <footer class="main-footer">
-        <p class="footer-contacts">
-            Device
-            <br> г. Москва, ул. Строителей, 15
-            Тел.: +7 (495) 495-95-95
-        </p>
+        <div class="footer-contacts">
+            <a href="#" class="footer-logo">Device</a> 
+            <span>г. Москва, ул. Строителей, 15</span> 
+            <span>Тел.: +7 (495) 495-95-95</span>
+        </div>
         <nav class="additional-navigation">
             <ul class="site-navigation">
                 <li>
@@ -270,10 +279,10 @@
                     <a href="">Контакты</a>
                 </li>
             </ul>
-            <ul class="user-navigation">
+            <ul class="user-navigation footer-links">
 
-                <li class="login">
-                    <a class="login-link" href="login.html">Валентин Петухов</a>
+                <li class="profile">
+                    <a class="profile-link" href="profile.html">Валентин Петухов</a>
                 </li>
                 <li class="exit">
                     <a class="exit-link" href="exit.html">Выйти</a>
