@@ -102,7 +102,7 @@
                     <span class="slogan-title">Делай селфи, <br> как Бен Стиллер!</span>
                     <p>Самая длинная палка для селфи доступна в нашем магазине.
                         <br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                   
+
                     <table>
                         <tr class="value">
                             <td>8,5 м</td>
@@ -128,7 +128,7 @@
                     <span class="slogan-title">Худеем <br> правильно!</span>
                     <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
                     </p>
-                    
+
                     <table>
                         <tr class="value">
                             <td>48 часов</td>
@@ -152,7 +152,7 @@
                     <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под
                         стандартную
                         камеру.</p>
-                    
+
                     <table>
                         <tr class="value">
                             <td>800 м</td>
@@ -336,8 +336,8 @@
 
                 <p class="description-text">Вы можете забрать товар сами, заехав в наш офис.
                     Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-                <img src="img/map.png" width="560" height="222" alt="Карта">
-                <button class="btn">Напишите нам</button>
+                <img src="img/map.png" class="map" width="560" height="222" alt="Карта">
+                <button class="btn contacts-btn">Напишите нам</button>
             </section>
         </div>
     </main>
@@ -409,47 +409,49 @@
             </div>
         </div>
     </footer>
+    <div class="overlay fade">
+        <section class="modal modal-write-us scroll">
+            <h2 class="visually-hidden">Написать в компанию</h2>
+            <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="write-us-container">
+                    <div class="write-us-wrapper">
+                        <p>
+                            <label for="user-name">Ваше имя:</label>
+                            <input class="user-name" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+                        </p>
+                        <p>
+                            <label for="user-email">Ваш e-mail:</label>
+                            <input class="user-email" id="user-email" type="email" name="email"
+                                placeholder="email@example.com">
+                        </p>
+                    </div>
+                    <p>
+                        <label for="user-text">Текст письма:</label>
+                        <textarea class="user-text" id="user-text" rows="5" cols="45" name="text"
+                            placeholder="В свободной форме"></textarea>
 
-    <section class="modal modal-write-us">
-        <h2 class="visually-hidden">Написать в компанию</h2>
-        <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="write-us-container">
-                <div class="write-us-wrapper">
-                    <p>
-                        <label for="user-name">Ваше имя:</label>
-                        <input class="user-name" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
                     </p>
-                    <p>
-                        <label for="user-email">Ваш e-mail:</label>
-                        <input class="user-email" id="user-email" type="email" name="email"
-                            placeholder="email@example.com">
-                    </p>
+                    <button class="btn" type="submit">Отправить</button>
+                    <button class="modal-close close-form" type="button">
+                        <span class="visually-hidden">Закрыть</span>
+                        <img src="svg/modal-close.svg" alt="Кнопка закрыть">
+                    </button>
                 </div>
-                <p>
-                    <label for="user-text">Текст письма:</label>
-                    <textarea class="user-text" id="user-text" rows="5" cols="45" name="text"
-                        placeholder="В свободной форме"></textarea>
+            </form>
 
-                </p>
-                <button class="btn" type="submit">Отправить</button>
-                <button class="modal-close" type="button">
-                    <span class="visually-hidden">Закрыть</span>
-                    <img src="svg/modal-close.svg" alt="Кнопка закрыть">
-                </button>
-            </div>
-        </form>
+        </section>
 
 
-    </section>
-
-    <section class="modal modal-map">
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-        <img src="img/map-big.png" width="960" height="559" alt="Большая карта">
-        <button class="modal-close" type="button">
-            <span class="visually-hidden">Закрыть</span>
-            <img src="svg/modal-close.svg" alt="Кнопка закрыть">
-        </button>
-    </section>
+        <section class="modal modal-map scroll">
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473236!2d37.52742931548593!3d55.68703400453057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1578323577712!5m2!1sru!2sru" width="960" height="559" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+           
+            <button class="modal-close close-map" type="button">
+                <span class="visually-hidden">Закрыть</span>
+                <img src="svg/modal-close.svg" alt="Кнопка закрыть">
+            </button>
+        </section>
+    </div>
     <script src="js/script.js"></script>
 </body>
 
