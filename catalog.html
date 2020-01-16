@@ -8,6 +8,7 @@
         rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+   
 </head>
 
 <body class="inner-page">
@@ -86,8 +87,9 @@
 
         </nav>
     </header>
-    <main class="container">
-        <div class="title-and-breadcrumbs">
+    <main>
+        <div class="title-and-breadcrumbs container">
+            
             <h1 class="name-page">Моноподы для селфи</h1>
             <ul class="breadcrumbs">
                 <li>
@@ -100,8 +102,9 @@
                     <span>Моноподы для селфи</span>
                 </li>
             </ul>
+        
         </div>
-        <div class="catalog-columns">
+        <div class="catalog-columns container">
             <section class="filter">
                 <h2 class="visually-hidden">Фильтр товаров</h2>
                 <span class="filter-name">Фильтр:</span>
@@ -112,22 +115,13 @@
 
                             <div class="cost-range-wrapper">
                                 <div class="cost-range">
-                                    <div class="range">
-                                        <div class="active-range"></div>
-                                    </div>
-                                    <div class="min-cost">
-                                        <img src="svg/filter-button.svg" width="20" height="23"
-                                            alt="Ползунок минимальной стоимости">
-                                    </div>
-                                    <div class="max-cost">
-                                        <img src="svg/filter-button.svg" width="20" height="23"
-                                            alt="Ползунок максимальной стоимости">
-                                    </div>
+                                    <div id="filter__range" class="range"></div>
+                                   
                                 </div>
-                                <label for="min-cost-dot">от</label>
-                                <input type="text" name="min-cost-dot" id="min-cost-dot" value="0">
-                                <label for="max-cost-dot">до</label>
-                                <input type="text" name="max-cost-dot" id="max-cost-dot" value="5000">
+                                <label for="priceMin">от</label>
+                                <input id="priceMin" type="text" name="min-cost-dot" value="0">
+                                <label for="priceMax">до</label>
+                                <input id="priceMax" type="text" name="max-cost-dot" value="5000">
                             </div>
                         </fieldset>
                         <fieldset>
@@ -385,6 +379,10 @@
             </div>
         </div>
     </footer>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script-filter.js"></script>
+   
 </body>
 
 </html>

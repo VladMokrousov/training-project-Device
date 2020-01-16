@@ -98,7 +98,7 @@ input[type="radio"].visually-hidden {
 .container {
   width: 1160px;
   margin: 0 auto;
-  padding: 0 20px;
+ 
   
 }
 
@@ -109,7 +109,7 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
   background-image: 
   linear-gradient(to bottom, #ffffff, #ffffff);
-  background-size: 10px 25px;
+  background-size: 10px 45px;
   background-position: 0 0;
   background-repeat: repeat-x;
 }
@@ -125,7 +125,7 @@ input[type="radio"].visually-hidden {
 }
 .main-header-logo {
   width: 165px;
-  margin-top: 20px;
+  padding-top: 20px;
   margin-bottom: 35px;
 }
 .user-navigation,
@@ -309,7 +309,7 @@ button.btn-search {
   position: absolute;
   top: 25px;
   left: -60px;
-  z-index: 1;
+  z-index: 2;
   width: 1040px;
   background-color: #f7e296;
   padding: 30px 60px 35px;
@@ -353,11 +353,12 @@ button.btn-search {
   padding-top: 80px;
   
 }
-.slide-1 .slogan-title {
+.slide-text .slogan-title {
+  position: relative;
   display: block;
   margin-bottom: 30px;
 }
-.slide-1 p {
+.slide-text p{
   margin: 0;
   padding: 0;
 
@@ -386,15 +387,7 @@ button.btn-search {
   padding-top: 80px;
   
 }
-.slide-2 .slogan-title {
-  display: block;
-  margin-bottom: 30px;
-}
-.slide-2 p {
-  margin: 0;
-  padding: 0;
 
-}
 .slide-3 {
   padding-top: 60px;
 }
@@ -408,15 +401,7 @@ button.btn-search {
   padding-top: 20px;
   
 }
-.slide-3 .slogan-title {
-  display: block;
-  margin-bottom: 30px;
-}
-.slide-3 p {
-  margin: 0;
-  padding: 0;
 
-}
 
 .slide-3 td {
   padding-right: 47px;
@@ -645,18 +630,20 @@ button.btn-search {
   padding: 0;
 }
 
-
-.services-wrapper{
-  
-  display: flex;
-  padding-bottom: 150px;
-  margin-bottom: 105px;
+.services {
   background-color: #e5e5e5;
   background-image: 
   linear-gradient(to bottom, #ffffff, #ffffff);
   background-size: 10px 25px;
   background-position: 0 0;
   background-repeat: repeat-x;
+}
+.services-wrapper{
+  
+  display: flex;
+  padding-bottom: 150px;
+  margin-bottom: 105px;
+ 
 }
 .services-wrapper .info-header {
   position: relative;
@@ -800,6 +787,18 @@ button.btn-search {
 }
 .about-us {
   width: 480px;
+  position: relative;
+  padding-top: 50px;
+}
+.about-us::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 7px;
+  background-color: #000000;
+  
 }
 .about-us p:first-of-type {
   margin-bottom: 35px;
@@ -807,6 +806,7 @@ button.btn-search {
 .about-us p:last-of-type {
   margin-bottom: 70px;
 }
+
 .columns ul {
   margin: 0;
   padding: 0;
@@ -848,6 +848,19 @@ ul.transport-company {
 }
 .contacts {
   width: 560px;
+  position: relative;
+  padding-top: 50px;
+}
+
+.contacts::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 7px;
+  background-color: #000000;
+  
 }
 .contacts p {
   margin-bottom: 35px;
@@ -961,6 +974,7 @@ nav.inner-page {
 }
 .title-and-breadcrumbs {
   padding-left: 60px;
+  box-sizing: border-box;
 }
 .name-page {
 margin: 0;
@@ -1006,12 +1020,22 @@ padding: 0;
 .catalog-columns {
   display: flex;
   justify-content: space-between;
-  padding-left: 60px;
+  
 }
 .filter {
   width: 268px;
- 
-  
+  padding-left: 60px;
+  position: relative;
+}
+.filter::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: #eeeeee;
 }
 .filter-name,
 .sort-name {
@@ -1022,7 +1046,28 @@ padding: 0;
   background-color: #dcdcdc;
   display: block;
   padding: 25px 0;
-  
+  position: relative;
+  z-index: 1;
+}
+.filter-name::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: #dcdcdc;
+}
+.filter-name::after {
+  z-index: -2;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: #ebebeb;
 }
 .filter-wrapper fieldset {
   border: none;
@@ -1475,64 +1520,7 @@ textarea.user-text:focus::-ms-input-placeholder {
   background-color: #000000;
   
 }
-.cost-range-wrapper {
-  margin-bottom: 40px;
-}
-.cost-range {
-  width: 200px;
-  position: relative;
-}
-.range {
-  width: 200px;
-  height: 2px;
-  background-color: #dbdbdb;
-}
-.active-range {
-  width: 117px;
-  height: 2px;
-  background-color: #91c92f;
-}
-.min-cost,
-.max-cost {
-  position: absolute;
-  cursor: pointer;
-}
-.min-cost {
-  top: -10px;
-  left: -5px;
-}
-.max-cost {
-  top: -10px;
-  left: 110px;
-}
-.min-cost img:active,
-.max-cost img:active {
-  width: 22px;
-  height: 25px;
-}
 
-.cost-range-wrapper input {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 300;
-  color: rgba(0,0,0,0.2);
-
-  border: none;
-  background-color: transparent;
-  width: 50px;
-  margin-top: 10px;
-}
-.cost-range-wrapper label {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 300;
-  color: rgba(0,0,0,0.2);
-}
-.cost-range-wrapper input:first-of-type {
-  margin-right: 20px;
-}
 .sort-name {
   margin-right: 53px;
 }
@@ -1544,6 +1532,7 @@ textarea.user-text:focus::-ms-input-placeholder {
 }
 .sort-navigation {
   position: relative;
+  z-index: 1;
 }
 .arrow-wrapper {
   position: absolute;
@@ -1871,4 +1860,90 @@ textarea.user-text:focus::-ms-input-placeholder {
 }
 .map {
   cursor: pointer;
+}
+/* Стили для фильтра*/
+
+.cost-range-wrapper {
+  margin-bottom: 40px;
+}
+.cost-range {
+  width: 200px;
+  position: relative;
+}
+.range {
+  width: 200px;
+  height: 2px;
+  background-color: #dbdbdb;
+}
+.ui-slider-horizontal .ui-slider-range {
+  background-color: #91c92f; 
+}
+
+.cost-range-wrapper input {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(0,0,0,0.2);
+  
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  margin-top: 10px;
+}
+.cost-range-wrapper label {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(0,0,0,0.2);
+}
+.cost-range-wrapper input:first-of-type {
+  margin-right: 20px;
+}
+    
+.ui-slider .ui-slider-handle,
+.ui-slider .ui-slider-handle:hover,
+.ui-slider .ui-slider-handle:focus {
+	cursor: pointer;
+	position: absolute;
+	z-index: 5;
+	width: 20px;
+	height: 23px;
+	background-image: url("../svg/filter-button.svg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+.ui-slider .ui-slider-handle:active {
+	
+	width: 22px;
+	height: 25px;
+	background-image: url("../svg/filter-button-big.svg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	
+}
+
+.ui-slider .ui-slider-range {
+  position: absolute;
+  top: 0;
+	height: 100%;
+	z-index: 1;
+
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+	top: -10px;
+	margin-left: -10px;
+}
+
+.inner-page main {
+  overflow-x: hidden;
 }
