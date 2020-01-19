@@ -682,6 +682,7 @@ button.btn-search {
   padding-top: 8px;
   padding-bottom: 8px;
   cursor: pointer;
+  outline: none;
 }
 .info-header-tab.active,
 .info-header-tab:active {
@@ -689,6 +690,7 @@ button.btn-search {
   background-color: #000000;
   
 }
+
 .info-header-tab::after{
   width: 160px;
 }
@@ -698,8 +700,7 @@ button.btn-search {
  background-image: none;
  
 }
-
-.info-header-tab.active::before {
+.info-header-tab.active::before{
   content: "";
   position: absolute;
   top: 0;
@@ -707,8 +708,19 @@ button.btn-search {
   width: 117px;
   height: 100%;
   background-color: #000000;
-  
+
+  transition: 0.5s;
 }
+.info-header-tab::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #000000;
+}
+
 
 
 .info-tabcontent {
